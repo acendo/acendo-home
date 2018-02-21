@@ -8,7 +8,6 @@ body {
     margin: 0;
     align-content: center;
 }
-
 h1, h2 {
     color: #003b3f;
     width: 100%;
@@ -25,12 +24,17 @@ a {
     color: #444444;
 }
 .header {
-    padding: 16px 16px 0px;
+    padding: 16px 0 0;
     margin: 15px;
 }
 @media screen and (min-width: 600px) {
     .header--content {
         display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .nav li {
+        margin-left: 16px;
     }
 }
 .nav {
@@ -71,8 +75,9 @@ a:hover {
 .section--content {
     max-width: 700px;
     margin: auto;
+    flex: wrap;
 }
-.section--members {
+.section--members .section--content {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -81,9 +86,6 @@ a:hover {
 }
 video {
     align-content: center;
-}
-.section--members div {
-    margin: 16px;
 }
 .opening-quote {
     color: teal;
